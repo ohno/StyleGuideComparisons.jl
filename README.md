@@ -172,46 +172,40 @@ This document compares the Julia style guides: [YAS](https://github.com/jrevels/
 | total | 36.4% | 36.4% | 51.5% |
 
 ## [indent](https://domluna.github.io/JuliaFormatter.jl/v2.1/#indent)
-
-YAS
 ```julia
+# YAS
 for i in 1:10
     println(i)
 end
 ```
-
-Blue
 ```julia
+# Blue
 for i in 1:10
     println(i)
 end
 ```
-
-SciML
 ```julia
+# SciML
 for i in 1:10
     println(i)
 end
 ```
-
-Runic
 ```julia
+# Runic
 for i in 1:10
     println(i)
 end
 ```
 
 ## [margin](https://domluna.github.io/JuliaFormatter.jl/v2.1/#margin)
-
-YAS
 ```julia
+# YAS
 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 + 11 + 12 + 13 + 14 + 15 + 16 + 17 + 18 + 19 + 20 +
 21 + 22 + 23 + 24 + 25 + 26 + 27 + 28 + 29 + 30 + 31 + 32 + 33 + 34 + 35 + 36 + 37 + 38 +
 39 + 40 + 41 + 42 + 43 + 44 + 45 + 46 + 47 + 48 + 49 + 50
 ```
-
-Blue
 ```julia
+# Blue
 1 +
 2 +
 3 +
@@ -263,103 +257,89 @@ Blue
 49 +
 50
 ```
-
-SciML
 ```julia
+# SciML
 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 + 11 + 12 + 13 + 14 + 15 + 16 + 17 + 18 + 19 + 20 +
 21 + 22 + 23 + 24 + 25 + 26 + 27 + 28 + 29 + 30 + 31 + 32 + 33 + 34 + 35 + 36 + 37 + 38 +
 39 + 40 + 41 + 42 + 43 + 44 + 45 + 46 + 47 + 48 + 49 + 50
 ```
-
-Runic
 ```julia
+# Runic
 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 + 11 + 12 + 13 + 14 + 15 + 16 + 17 + 18 + 19 + 20 + 21 + 22 + 23 + 24 + 25 + 26 + 27 + 28 + 29 + 30 + 31 + 32 + 33 + 34 + 35 + 36 + 37 + 38 + 39 + 40 + 41 + 42 + 43 + 44 + 45 + 46 + 47 + 48 + 49 + 50
 ```
 
 ## [always_for_in](https://domluna.github.io/JuliaFormatter.jl/v2.1/#always_for_in)
-
-YAS
 ```julia
+# YAS
 for i in 1:10
     println(i)
 end
 ```
-
-Blue
 ```julia
+# Blue
 for i in 1:10
     println(i)
 end
 ```
-
-SciML
 ```julia
+# SciML
 for i in 1:10
     println(i)
 end
 ```
-
-Runic
 ```julia
+# Runic
 for i in 1:10
     println(i)
 end
 ```
 
 ## [whitespace_typedefs](hhttps://domluna.github.io/JuliaFormatter.jl/v2.1/#whitespace_typedefs)
-
-YAS
 ```julia
+# YAS
 Union{A<:B,C}
 Union{A<:B,C}
 ```
-
-Blue
 ```julia
+# Blue
 Union{A<:B,C}
 Union{A<:B,C}
 ```
-
-SciML
 ```julia
+# SciML
 Union{A <: B, C}
 Union{A <: B, C}
 ```
-
-Runic
 ```julia
+# Runic
 Union{A <: B, C}
 Union{A <: B, C}
 ```
 
 ## [whitespace_ops_in_indices](https://domluna.github.io/JuliaFormatter.jl/v2.1/#whitespace_ops_in_indices)
-
-YAS
 ```julia
+# YAS
 arr[a + b]
 arr[a+b]
 arr[(i1 + i2):(i3 + i4)]
 arr[(i1 + i2):(i3 + i4)]
 ```
-
-Blue
 ```julia
+# Blue
 arr[a + b]
 arr[a + b]
 arr[(i1 + i2):(i3 + i4)]
 arr[(i1 + i2):(i3 + i4)]
 ```
-
-SciML
 ```julia
+# SciML
 arr[a + b]
 arr[a + b]
 arr[(i1 + i2):(i3 + i4)]
 arr[(i1 + i2):(i3 + i4)]
 ```
-
-Runic
 ```julia
+# Runic
 arr[a + b]
 arr[a + b]
 arr[(i1 + i2):(i3 + i4)]
@@ -367,9 +347,8 @@ arr[(i1 + i2):(i3 + i4)]
 ```
 
 ## [remove_extra_newlines](https://domluna.github.io/JuliaFormatter.jl/v2.1/#remove_extra_newlines)
-
-YAS
 ```julia
+# YAS
 module M
 
 a = 1
@@ -382,9 +361,8 @@ b = 2
 
 end
 ```
-
-Blue
 ```julia
+# Blue
 module M
 
 a = 1
@@ -397,9 +375,8 @@ b = 2
 
 end
 ```
-
-SciML
 ```julia
+# SciML
 module M
 
 a = 1
@@ -412,9 +389,8 @@ b = 2
 
 end
 ```
-
-Runic
 ```julia
+# Runic
 module M
 
 
@@ -435,73 +411,63 @@ end
 ```
 
 ## [import_to_using](https://domluna.github.io/JuliaFormatter.jl/v2.1/#import_to_using)
-
-YAS
 ```julia
+# YAS
 using A: A
 
 using A: A
 using B: B
 using C: C
 ```
-
-Blue
 ```julia
+# Blue
 using A: A
 
 using A: A
 using B: B
 using C: C
 ```
-
-SciML
 ```julia
+# SciML
 import A
 
 import A, B, C
 ```
-
-Runic
 ```julia
+# Runic
 import A
 
 import A, B, C
 ```
 
 ## [pipe_to_function_call](https://domluna.github.io/JuliaFormatter.jl/v2.1/#pipe_to_function_call)
-
-YAS
 ```julia
+# YAS
 f(x)
 ```
-
-Blue
 ```julia
+# Blue
 f(x)
 ```
-
-SciML
 ```julia
+# SciML
 x |> f
 ```
-
-Runic
 ```julia
+# Runic
 x |> f
 ```
 
 ## [short_to_long_function_def](https://domluna.github.io/JuliaFormatter.jl/v2.1/#short_to_long_function_def)
-
-YAS
 ```julia
+# YAS
 function f(arg1, arg2)
     return 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 + 11 + 12 + 13 + 14 + 15 + 16 + 17 + 18 +
            19 + 20 + 21 + 22 + 23 + 24 + 25 + 26 + 27 + 28 + 29 + 30
 end
 ```
-
-Blue
 ```julia
+# Blue
 function f(arg1, arg2)
     1 +
     2 +
@@ -535,100 +501,86 @@ function f(arg1, arg2)
     30
 end
 ```
-
-SciML
 ```julia
+# SciML
 function f(arg1, arg2)
     1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 + 11 + 12 + 13 + 14 + 15 + 16 + 17 + 18 + 19 +
     20 + 21 + 22 + 23 + 24 + 25 + 26 + 27 + 28 + 29 + 30
 end
 ```
-
-Runic
 ```julia
+# Runic
 f(arg1, arg2) = 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 + 11 + 12 + 13 + 14 + 15 + 16 + 17 + 18 + 19 + 20 + 21 + 22 + 23 + 24 + 25 + 26 + 27 + 28 + 29 + 30
 ```
 
 ## [force_long_function_def](https://domluna.github.io/JuliaFormatter.jl/v2.1/#force_long_function_def)
-
-YAS
 ```julia
+# YAS
 f(arg1, arg2) = body
 ```
-
-Blue
 ```julia
+# Blue
 f(arg1, arg2) = body
 ```
-
-SciML
 ```julia
+# SciML
 f(arg1, arg2) = body
 ```
-
-Runic
 ```julia
+# Runic
 f(arg1, arg2) = body
 ```
 
 ## [long_to_short_function_def](https://domluna.github.io/JuliaFormatter.jl/v2.1/#long_to_short_function_def)
-
-YAS
 ```julia
+# YAS
 function f(arg2, arg2)
     return body
 end
 ```
-
-Blue
 ```julia
+# Blue
 function f(arg2, arg2)
     body
 end
 ```
-
-SciML
 ```julia
+# SciML
 function f(arg2, arg2)
     body
 end
 ```
-
-Runic
 ```julia
+# Runic
 function f(arg2, arg2)
     return body
 end
 ```
 
 ## [always_use_return](https://domluna.github.io/JuliaFormatter.jl/v2.1/#always_use_return)
-
-YAS
 ```julia
+# YAS
 function foo()
     expr1
     return expr2
 end
 ```
-
-Blue
 ```julia
+# Blue
 function foo()
     expr1
     expr2
 end
 ```
-
-SciML
 ```julia
+# SciML
 function foo()
     expr1
     expr2
 end
 ```
-
-Runic
 ```julia
+# Runic
 function foo()
     expr1
     return expr2
@@ -636,61 +588,52 @@ end
 ```
 
 ## [whitespace_in_kwargs](https://domluna.github.io/JuliaFormatter.jl/v2.1/#whitespace_in_kwargs)
-
-YAS
 ```julia
+# YAS
 f(; a=4)
 ```
-
-Blue
 ```julia
+# Blue
 f(; a=4)
 ```
-
-SciML
 ```julia
+# SciML
 f(; a = 4)
 ```
-
-Runic
 ```julia
+# Runic
 f(; a = 4)
 ```
 
 ## [annotate_untyped_fields_with_any](https://domluna.github.io/JuliaFormatter.jl/v2.1/#annotate_untyped_fields_with_any)
-
-YAS
 ```julia
+# YAS
 struct A
     arg1::Any
 end
 ```
-
-Blue
 ```julia
+# Blue
 struct A
     arg1
 end
 ```
-
-SciML
 ```julia
+# SciML
 struct A
     arg1::Any
 end
 ```
-
-Runic
 ```julia
+# Runic
 struct A
     arg1
 end
 ```
 
 ## [format_docstrings](https://domluna.github.io/JuliaFormatter.jl/v2.1/#format_docstrings)
-
-YAS
 ```julia
+# YAS
 """
 `1+1`
 """
@@ -698,9 +641,8 @@ function f(x)
     return x
 end
 ```
-
-Blue
 ```julia
+# Blue
 """
 `1+1`
 """
@@ -708,9 +650,8 @@ function f(x)
     return x
 end
 ```
-
-SciML
 ```julia
+# SciML
 """
 `1+1`
 """
@@ -718,9 +659,8 @@ function f(x)
     return x
 end
 ```
-
-Runic
 ```julia
+# Runic
 """
 `1+1`
 """
@@ -730,9 +670,8 @@ end
 ```
 
 ## [align_assignment](https://domluna.github.io/JuliaFormatter.jl/v2.1/custom_alignment/#align_assignment)
-
-YAS
 ```julia
+# YAS
 const variable1 = 1
 const var2 = 2
 const var3 = 3
@@ -748,9 +687,8 @@ vcat(X::T...) where {T<:Number} = T[X[i] for i in 1:length(X)]
 hcat(X::T...) where {T} = T[X[j] for i in 1:1, j in 1:length(X)]
 hcat(X::T...) where {T<:Number} = T[X[j] for i in 1:1, j in 1:length(X)]
 ```
-
-Blue
 ```julia
+# Blue
 const variable1 = 1
 const var2 = 2
 const var3 = 3
@@ -766,9 +704,8 @@ vcat(X::T...) where {T<:Number} = T[X[i] for i in 1:length(X)]
 hcat(X::T...) where {T} = T[X[j] for i in 1:1, j in 1:length(X)]
 hcat(X::T...) where {T<:Number} = T[X[j] for i in 1:1, j in 1:length(X)]
 ```
-
-SciML
 ```julia
+# SciML
 const variable1 = 1
 const var2 = 2
 const var3 = 3
@@ -784,9 +721,8 @@ vcat(X::T...) where {T <: Number} = T[X[i] for i in 1:length(X)]
 hcat(X::T...) where {T} = T[X[j] for i in 1:1, j in 1:length(X)]
 hcat(X::T...) where {T <: Number} = T[X[j] for i in 1:1, j in 1:length(X)]
 ```
-
-Runic
 ```julia
+# Runic
 const variable1 = 1
 const var2 = 2
 const var3 = 3
@@ -804,9 +740,8 @@ hcat(X::T...) where {T <: Number} = T[X[j] for i in 1:1, j in 1:length(X)]
 ```
 
 ## [align_struct_field](https://domluna.github.io/JuliaFormatter.jl/v2.1/custom_alignment/#align_struct_field)
-
-YAS
 ```julia
+# YAS
 Base.@kwdef struct Options
     indent::Int = 4
     margin::Int = 92
@@ -837,9 +772,8 @@ mutable struct Foo
     longfieldname::T
 end
 ```
-
-Blue
 ```julia
+# Blue
 Base.@kwdef struct Options
     indent::Int = 4
     margin::Int = 92
@@ -870,9 +804,8 @@ mutable struct Foo
     longfieldname::T
 end
 ```
-
-SciML
 ```julia
+# SciML
 Base.@kwdef struct Options
     indent::Int = 4
     margin::Int = 92
@@ -903,9 +836,8 @@ mutable struct Foo
     longfieldname::T
 end
 ```
-
-Runic
 ```julia
+# Runic
 Base.@kwdef struct Options
     indent::Int = 4
     margin::Int = 92
@@ -939,16 +871,14 @@ end
 ```
 
 ## [align_conditional](https://domluna.github.io/JuliaFormatter.jl/v2.1/custom_alignment/#align_conditional)
-
-YAS
 ```julia
+# YAS
 index = zeros(n <= typemax(Int8) ? Int8 :
               n <= typemax(Int16) ? Int16 :
               n <= typemax(Int32) ? Int32 : Int64, n)
 ```
-
-Blue
 ```julia
+# Blue
 index = zeros(
     if n <= typemax(Int8)
         Int8
@@ -962,18 +892,16 @@ index = zeros(
     n,
 )
 ```
-
-SciML
 ```julia
+# SciML
 index = zeros(
     n <= typemax(Int8) ? Int8 :
     n <= typemax(Int16) ? Int16 :
     n <= typemax(Int32) ? Int32 : Int64,
     n)
 ```
-
-Runic
 ```julia
+# Runic
 index = zeros(
     n <= typemax(Int8) ? Int8 :
         n <= typemax(Int16) ? Int16 :
@@ -982,17 +910,15 @@ index = zeros(
 ```
 
 ## [align_pair_arrow](https://domluna.github.io/JuliaFormatter.jl/v2.1/custom_alignment/#align_pair_arrow)
-
-YAS
 ```julia
+# YAS
 index = zeros(n <= typemax(Int8) ? Int8 :
               n <= typemax(Int16) ? Int16 :
               n <= typemax(Int32) ? Int32 : Int64,
               n)
 ```
-
-Blue
 ```julia
+# Blue
 index = zeros(
     if n <= typemax(Int8)
         Int8
@@ -1006,9 +932,8 @@ index = zeros(
     n,
 )
 ```
-
-SciML
 ```julia
+# SciML
 index = zeros(
     n <= typemax(Int8) ? Int8 :
     n <= typemax(Int16) ? Int16 :
@@ -1016,9 +941,8 @@ index = zeros(
     n
 )
 ```
-
-Runic
 ```julia
+# Runic
 index = zeros(
     n <= typemax(Int8) ? Int8 :
         n <= typemax(Int16) ? Int16 :
@@ -1028,32 +952,28 @@ index = zeros(
 ```
 
 ## [align_matrix](https://domluna.github.io/JuliaFormatter.jl/v2.1/custom_alignment/#align_matrix)
-
-YAS
 ```julia
+# YAS
 A = [100 300 400
      1 ee 40000
      2 a b]
 ```
-
-Blue
 ```julia
+# Blue
 A = [
     100 300 400
     1 ee 40000
     2 a b
 ]
 ```
-
-SciML
 ```julia
+# SciML
 A = [100 300 400
      1 ee 40000
      2 a b]
 ```
-
-Runic
 ```julia
+# Runic
 A = [
     100 300   400
     1  ee 40000
@@ -1062,105 +982,88 @@ A = [
 ```
 
 ## [conditional_to_if](https://domluna.github.io/JuliaFormatter.jl/v2.1/#conditional_to_if)
-
-YAS
 ```julia
+# YAS
 E ? A : B
 ```
-
-Blue
 ```julia
+# Blue
 E ? A : B
 ```
-
-SciML
 ```julia
+# SciML
 E ? A : B
 ```
-
-Runic
 ```julia
+# Runic
 E ? A : B
 ```
 
 ## [normalize_line_endings](https://domluna.github.io/JuliaFormatter.jl/v2.1/#normalize_line_endings)
-
-YAS
 ```julia
+# YAS
 
 ```
-
-Blue
 ```julia
+# Blue
 
 ```
-
-SciML
 ```julia
+# SciML
 
 ```
-
-Runic
 ```julia
+# Runic
 
 ```
 
 ## [trailing_comma](https://domluna.github.io/JuliaFormatter.jl/v2.1/#trailing_comma)
-
-YAS
 ```julia
+# YAS
 funccall(arg1, arg2, arg3)
 ```
-
-Blue
 ```julia
+# Blue
 funccall(arg1, arg2, arg3)
 ```
-
-SciML
 ```julia
+# SciML
 funccall(arg1, arg2, arg3)
 ```
-
-Runic
 ```julia
+# Runic
 funccall(arg1, arg2, arg3)
 ```
 
 ## [trailing_zero](https://domluna.github.io/JuliaFormatter.jl/v2.1/#trailing_zero)
-
-YAS
 ```julia
+# YAS
 a = 1.0
 a = 0.1
 a = 1.0f0
 ```
-
-Blue
 ```julia
+# Blue
 a = 1.0
 a = 0.1
 a = 1.0f0
 ```
-
-SciML
 ```julia
+# SciML
 a = 1.0
 a = 0.1
 a = 1.0f0
 ```
-
-Runic
 ```julia
+# Runic
 a = 1.0
 a = 0.1
 a = 1.0f0
 ```
 
 ## [join_lines_based_on_source](https://domluna.github.io/JuliaFormatter.jl/v2.1/#join_lines_based_on_source)
-
-YAS
 ```julia
+# YAS
 function foo(arg1,
              arg2, arg3)
     return body
@@ -1174,9 +1077,8 @@ else
     body3
 end
 ```
-
-Blue
 ```julia
+# Blue
 function foo(arg1, arg2, arg3)
     body
 end
@@ -1189,9 +1091,8 @@ else
     body3
 end
 ```
-
-SciML
 ```julia
+# SciML
 function foo(arg1,
         arg2, arg3
 )
@@ -1206,9 +1107,8 @@ else
     body3
 end
 ```
-
-Runic
 ```julia
+# Runic
 function foo(
         arg1,
         arg2, arg3
@@ -1226,9 +1126,8 @@ end
 ```
 
 ## [indent_submodule](https://domluna.github.io/JuliaFormatter.jl/v2.1/#indent_submodule)
-
-YAS
 ```julia
+# YAS
 module A
 a = 1
 
@@ -1243,9 +1142,8 @@ d = 4
 
 end
 ```
-
-Blue
 ```julia
+# Blue
 module A
 a = 1
 
@@ -1260,9 +1158,8 @@ d = 4
 
 end
 ```
-
-SciML
 ```julia
+# SciML
 module A
 a = 1
 
@@ -1277,9 +1174,8 @@ d = 4
 
 end
 ```
-
-Runic
 ```julia
+# Runic
 module A
 a = 1
 
@@ -1296,99 +1192,83 @@ end
 ```
 
 ## [separate_kwargs_with_semicolon](https://domluna.github.io/JuliaFormatter.jl/v2.1/#separate_kwargs_with_semicolon)
-
-YAS
 ```julia
+# YAS
 f(a; b=1)
 ```
-
-Blue
 ```julia
+# Blue
 f(a; b=1)
 ```
-
-SciML
 ```julia
+# SciML
 f(a, b = 1)
 ```
-
-Runic
 ```julia
+# Runic
 f(a, b = 1)
 ```
 
 ## [surround_whereop_typeparameters](https://domluna.github.io/JuliaFormatter.jl/v2.1/#surround_whereop_typeparameters)
-
-YAS
 ```julia
+# YAS
 function func() where {TPARAM}
 end
 ```
-
-Blue
 ```julia
+# Blue
 function func() where {TPARAM} end
 ```
-
-SciML
 ```julia
+# SciML
 function func() where {TPARAM}
 end
 ```
-
-Runic
 ```julia
+# Runic
 function func() where {TPARAM}
 end
 ```
 
 ## [for_in_replacement](https://domluna.github.io/JuliaFormatter.jl/v2.1/#for_in_replacement)
-
-YAS
 ```julia
+# YAS
 for a in 1:10
 end
 ```
-
-Blue
 ```julia
+# Blue
 for a in 1:10
 end
 ```
-
-SciML
 ```julia
+# SciML
 for a in 1:10
 end
 ```
-
-Runic
 ```julia
+# Runic
 for a in 1:10
 end
 ```
 
 ## [variable_call_indent](https://domluna.github.io/JuliaFormatter.jl/v2.1/#variable_call_indent-and-and-yas_style_nesting)
-
-YAS
 ```julia
+# YAS
 Dict{Int,Int}(1 => 2,
               3 => 4)
 ```
-
-Blue
 ```julia
+# Blue
 Dict{Int,Int}(1 => 2, 3 => 4)
 ```
-
-SciML
 ```julia
+# SciML
 Dict{Int, Int}(1 => 2,
     3 => 4)
 ```
-
-Runic
 ```julia
+# Runic
 Dict{Int, Int}(
     1 => 2,
     3 => 4
@@ -1396,34 +1276,30 @@ Dict{Int, Int}(
 ```
 
 ## [yas_style_nesting](https://domluna.github.io/JuliaFormatter.jl/v2.1/#variable_call_indent-and-and-yas_style_nesting)
-
-YAS
 ```julia
+# YAS
 function my_large_function(argument1, argument2,
                            argument3, argument4,
                            argument5, x, y, z)
     return foo(x) + goo(y)
 end
 ```
-
-Blue
 ```julia
+# Blue
 function my_large_function(argument1, argument2, argument3, argument4, argument5, x, y, z)
     foo(x) + goo(y)
 end
 ```
-
-SciML
 ```julia
+# SciML
 function my_large_function(argument1, argument2,
         argument3, argument4,
         argument5, x, y, z)
     foo(x) + goo(y)
 end
 ```
-
-Runic
 ```julia
+# Runic
 function my_large_function(
         argument1, argument2,
         argument3, argument4,
@@ -1434,9 +1310,8 @@ end
 ```
 
 ## [short_circuit_to_if](https://domluna.github.io/JuliaFormatter.jl/v2.1/#short_circuit_to_if)
-
-YAS
 ```julia
+# YAS
 function foo(a, b)
     a || return "bar"
 
@@ -1445,9 +1320,8 @@ function foo(a, b)
     b && return "ooo"
 end
 ```
-
-Blue
 ```julia
+# Blue
 function foo(a, b)
     a || return "bar"
 
@@ -1456,9 +1330,8 @@ function foo(a, b)
     b && return "ooo"
 end
 ```
-
-SciML
 ```julia
+# SciML
 function foo(a, b)
     a || return "bar"
 
@@ -1467,9 +1340,8 @@ function foo(a, b)
     b && return "ooo"
 end
 ```
-
-Runic
 ```julia
+# Runic
 function foo(a, b)
     a || return "bar"
 
@@ -1480,23 +1352,20 @@ end
 ```
 
 ## [disallow_single_arg_nesting](https://domluna.github.io/JuliaFormatter.jl/v2.1/#disallow_single_arg_nesting)
-
-YAS
 ```julia
+# YAS
 function_call("String argument")
 [array_item(10)]
 {key => value("String value")}
 ```
-
-Blue
 ```julia
+# Blue
 function_call("String argument")
 [array_item(10)]
 {key => value("String value")}
 ```
-
-SciML
 ```julia
+# SciML
 function_call(
     "String argument"
 )
@@ -1507,9 +1376,8 @@ function_call(
     "String value"
 )}
 ```
-
-Runic
 ```julia
+# Runic
 function_call(
     "String argument"
 )

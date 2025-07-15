@@ -99,8 +99,7 @@ for name in names
     # print to README.md
     println(readme, "\n## [$(name)]($(result[name,:url]))")
     for style in styles
-        println(readme, "\n$(style)")
-        println(readme, "```julia\n$(result[name, style])\n```")
+        println(readme, "```julia\n# $(style)\n$(result[name, style])\n```")
     end
 end
 
