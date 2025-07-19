@@ -6,171 +6,6 @@ This document compares the Julia style guides: [YAS](https://github.com/jrevels/
 
 [![Star History Chart](https://api.star-history.com/svg?repos=jrevels/YASGuide,JuliaDiff/BlueStyle,SciML/SciMLStyle,fredrikekre/Runic.jl&type=Date)](https://www.star-history.com/#jrevels/YASGuide&JuliaDiff/BlueStyle&SciML/SciMLStyle&fredrikekre/Runic.jl&Date)
 
-## Similarity
-
-|            |    YAS |   Blue |  SciML |  Runic |
-| ---------- | ------ | ------ | ------ | ------ |
-|   YAS v.s. | 100.0% |  57.6% |  51.5% |  36.4% |
-|  Blue v.s. |  57.6% | 100.0% |  45.5% |  36.4% |
-| SciML v.s. |  51.5% |  45.5% | 100.0% |  51.5% |
-| Runic v.s. |  36.4% |  36.4% |  51.5% | 100.0% |
-
-## YAS v.s.
-
-| YAS v.s. | Blue | SciML | Runic |
-| --- | --- | --- | --- |
-| indent | ✅ | ✅ | ✅ |
-| margin | ❌ | ✅ | ❌ |
-| always_for_in | ✅ | ✅ | ✅ |
-| whitespace_typedefs | ✅ | ❌ | ❌ |
-| whitespace_ops_in_indices | ❌ | ❌ | ❌ |
-| remove_extra_newlines | ✅ | ✅ | ❌ |
-| import_to_using | ✅ | ❌ | ❌ |
-| pipe_to_function_call | ✅ | ❌ | ❌ |
-| short_to_long_function_def | ❌ | ❌ | ❌ |
-| force_long_function_def | ✅ | ✅ | ✅ |
-| long_to_short_function_def | ❌ | ❌ | ✅ |
-| always_use_return | ❌ | ❌ | ✅ |
-| whitespace_in_kwargs | ✅ | ❌ | ❌ |
-| annotate_untyped_fields_with_any | ❌ | ✅ | ❌ |
-| format_docstrings | ✅ | ✅ | ✅ |
-| align_assignment | ✅ | ❌ | ❌ |
-| align_struct_field | ✅ | ✅ | ❌ |
-| align_conditional | ❌ | ❌ | ❌ |
-| align_pair_arrow | ❌ | ❌ | ❌ |
-| align_matrix | ❌ | ✅ | ❌ |
-| conditional_to_if | ✅ | ✅ | ✅ |
-| normalize_line_endings | ✅ | ✅ | ✅ |
-| trailing_comma | ✅ | ✅ | ✅ |
-| trailing_zero | ✅ | ✅ | ✅ |
-| join_lines_based_on_source | ❌ | ❌ | ❌ |
-| indent_submodule | ❌ | ✅ | ❌ |
-| separate_kwargs_with_semicolon | ✅ | ❌ | ❌ |
-| surround_whereop_typeparameters | ❌ | ✅ | ✅ |
-| for_in_replacement | ✅ | ✅ | ✅ |
-| variable_call_indent | ❌ | ❌ | ❌ |
-| yas_style_nesting | ❌ | ❌ | ❌ |
-| short_circuit_to_if | ✅ | ✅ | ❌ |
-| disallow_single_arg_nesting | ✅ | ❌ | ❌ |
-| total | 57.6% | 51.5% | 36.4% |
-
-## Blue v.s.
-
-| Blue v.s. | YAS | SciML | Runic |
-| --- | --- | --- | --- |
-| indent | ✅ | ✅ | ✅ |
-| margin | ❌ | ❌ | ❌ |
-| always_for_in | ✅ | ✅ | ✅ |
-| whitespace_typedefs | ✅ | ❌ | ❌ |
-| whitespace_ops_in_indices | ❌ | ✅ | ✅ |
-| remove_extra_newlines | ✅ | ✅ | ❌ |
-| import_to_using | ✅ | ❌ | ❌ |
-| pipe_to_function_call | ✅ | ❌ | ❌ |
-| short_to_long_function_def | ❌ | ❌ | ❌ |
-| force_long_function_def | ✅ | ✅ | ✅ |
-| long_to_short_function_def | ❌ | ✅ | ❌ |
-| always_use_return | ❌ | ✅ | ❌ |
-| whitespace_in_kwargs | ✅ | ❌ | ❌ |
-| annotate_untyped_fields_with_any | ❌ | ❌ | ✅ |
-| format_docstrings | ✅ | ✅ | ✅ |
-| align_assignment | ✅ | ❌ | ❌ |
-| align_struct_field | ✅ | ✅ | ❌ |
-| align_conditional | ❌ | ❌ | ❌ |
-| align_pair_arrow | ❌ | ❌ | ❌ |
-| align_matrix | ❌ | ❌ | ❌ |
-| conditional_to_if | ✅ | ✅ | ✅ |
-| normalize_line_endings | ✅ | ✅ | ✅ |
-| trailing_comma | ✅ | ✅ | ✅ |
-| trailing_zero | ✅ | ✅ | ✅ |
-| join_lines_based_on_source | ❌ | ❌ | ❌ |
-| indent_submodule | ❌ | ❌ | ✅ |
-| separate_kwargs_with_semicolon | ✅ | ❌ | ❌ |
-| surround_whereop_typeparameters | ❌ | ❌ | ❌ |
-| for_in_replacement | ✅ | ✅ | ✅ |
-| variable_call_indent | ❌ | ❌ | ❌ |
-| yas_style_nesting | ❌ | ❌ | ❌ |
-| short_circuit_to_if | ✅ | ✅ | ❌ |
-| disallow_single_arg_nesting | ✅ | ❌ | ❌ |
-| total | 57.6% | 45.5% | 36.4% |
-
-## SciML v.s.
-
-| SciML v.s. | YAS | Blue | Runic |
-| --- | --- | --- | --- |
-| indent | ✅ | ✅ | ✅ |
-| margin | ✅ | ❌ | ❌ |
-| always_for_in | ✅ | ✅ | ✅ |
-| whitespace_typedefs | ❌ | ❌ | ✅ |
-| whitespace_ops_in_indices | ❌ | ✅ | ✅ |
-| remove_extra_newlines | ✅ | ✅ | ❌ |
-| import_to_using | ❌ | ❌ | ✅ |
-| pipe_to_function_call | ❌ | ❌ | ✅ |
-| short_to_long_function_def | ❌ | ❌ | ❌ |
-| force_long_function_def | ✅ | ✅ | ✅ |
-| long_to_short_function_def | ❌ | ✅ | ❌ |
-| always_use_return | ❌ | ✅ | ❌ |
-| whitespace_in_kwargs | ❌ | ❌ | ✅ |
-| annotate_untyped_fields_with_any | ✅ | ❌ | ❌ |
-| format_docstrings | ✅ | ✅ | ✅ |
-| align_assignment | ❌ | ❌ | ✅ |
-| align_struct_field | ✅ | ✅ | ❌ |
-| align_conditional | ❌ | ❌ | ❌ |
-| align_pair_arrow | ❌ | ❌ | ❌ |
-| align_matrix | ✅ | ❌ | ❌ |
-| conditional_to_if | ✅ | ✅ | ✅ |
-| normalize_line_endings | ✅ | ✅ | ✅ |
-| trailing_comma | ✅ | ✅ | ✅ |
-| trailing_zero | ✅ | ✅ | ✅ |
-| join_lines_based_on_source | ❌ | ❌ | ❌ |
-| indent_submodule | ✅ | ❌ | ❌ |
-| separate_kwargs_with_semicolon | ❌ | ❌ | ✅ |
-| surround_whereop_typeparameters | ✅ | ❌ | ✅ |
-| for_in_replacement | ✅ | ✅ | ✅ |
-| variable_call_indent | ❌ | ❌ | ❌ |
-| yas_style_nesting | ❌ | ❌ | ❌ |
-| short_circuit_to_if | ✅ | ✅ | ❌ |
-| disallow_single_arg_nesting | ❌ | ❌ | ❌ |
-| total | 51.5% | 45.5% | 51.5% |
-
-## Runic v.s.
-
-| Runic v.s. | YAS | Blue | SciML |
-| --- | --- | --- | --- |
-| indent | ✅ | ✅ | ✅ |
-| margin | ❌ | ❌ | ❌ |
-| always_for_in | ✅ | ✅ | ✅ |
-| whitespace_typedefs | ❌ | ❌ | ✅ |
-| whitespace_ops_in_indices | ❌ | ✅ | ✅ |
-| remove_extra_newlines | ❌ | ❌ | ❌ |
-| import_to_using | ❌ | ❌ | ✅ |
-| pipe_to_function_call | ❌ | ❌ | ✅ |
-| short_to_long_function_def | ❌ | ❌ | ❌ |
-| force_long_function_def | ✅ | ✅ | ✅ |
-| long_to_short_function_def | ✅ | ❌ | ❌ |
-| always_use_return | ✅ | ❌ | ❌ |
-| whitespace_in_kwargs | ❌ | ❌ | ✅ |
-| annotate_untyped_fields_with_any | ❌ | ✅ | ❌ |
-| format_docstrings | ✅ | ✅ | ✅ |
-| align_assignment | ❌ | ❌ | ✅ |
-| align_struct_field | ❌ | ❌ | ❌ |
-| align_conditional | ❌ | ❌ | ❌ |
-| align_pair_arrow | ❌ | ❌ | ❌ |
-| align_matrix | ❌ | ❌ | ❌ |
-| conditional_to_if | ✅ | ✅ | ✅ |
-| normalize_line_endings | ✅ | ✅ | ✅ |
-| trailing_comma | ✅ | ✅ | ✅ |
-| trailing_zero | ✅ | ✅ | ✅ |
-| join_lines_based_on_source | ❌ | ❌ | ❌ |
-| indent_submodule | ❌ | ✅ | ❌ |
-| separate_kwargs_with_semicolon | ❌ | ❌ | ✅ |
-| surround_whereop_typeparameters | ✅ | ❌ | ✅ |
-| for_in_replacement | ✅ | ✅ | ✅ |
-| variable_call_indent | ❌ | ❌ | ❌ |
-| yas_style_nesting | ❌ | ❌ | ❌ |
-| short_circuit_to_if | ❌ | ❌ | ❌ |
-| disallow_single_arg_nesting | ❌ | ❌ | ❌ |
-| total | 36.4% | 36.4% | 51.5% |
-
 ## [indent](https://domluna.github.io/JuliaFormatter.jl/v2.1/#indent)
 ```julia
 # YAS
@@ -1392,3 +1227,168 @@ function_call(
     ),
 }
 ```
+
+## YAS v.s.
+
+| YAS v.s. | Blue | SciML | Runic |
+| --- | --- | --- | --- |
+| indent | ✅ | ❌ | ❌ |
+| margin | ❌ | ✅ | ❌ |
+| always_for_in | ✅ | ❌ | ❌ |
+| whitespace_typedefs | ✅ | ❌ | ❌ |
+| whitespace_ops_in_indices | ❌ | ❌ | ❌ |
+| remove_extra_newlines | ✅ | ❌ | ❌ |
+| import_to_using | ✅ | ❌ | ❌ |
+| pipe_to_function_call | ✅ | ❌ | ❌ |
+| short_to_long_function_def | ❌ | ❌ | ❌ |
+| force_long_function_def | ✅ | ✅ | ✅ |
+| long_to_short_function_def | ❌ | ❌ | ❌ |
+| always_use_return | ❌ | ❌ | ❌ |
+| whitespace_in_kwargs | ✅ | ❌ | ❌ |
+| annotate_untyped_fields_with_any | ❌ | ❌ | ❌ |
+| format_docstrings | ✅ | ❌ | ❌ |
+| align_assignment | ✅ | ❌ | ❌ |
+| align_struct_field | ✅ | ❌ | ❌ |
+| align_conditional | ❌ | ❌ | ❌ |
+| align_pair_arrow | ❌ | ❌ | ❌ |
+| align_matrix | ❌ | ❌ | ❌ |
+| conditional_to_if | ✅ | ✅ | ✅ |
+| normalize_line_endings | ✅ | ✅ | ✅ |
+| trailing_comma | ✅ | ✅ | ✅ |
+| trailing_zero | ✅ | ❌ | ❌ |
+| join_lines_based_on_source | ❌ | ❌ | ❌ |
+| indent_submodule | ❌ | ❌ | ❌ |
+| separate_kwargs_with_semicolon | ✅ | ❌ | ❌ |
+| surround_whereop_typeparameters | ❌ | ❌ | ❌ |
+| for_in_replacement | ✅ | ❌ | ❌ |
+| variable_call_indent | ❌ | ❌ | ❌ |
+| yas_style_nesting | ❌ | ❌ | ❌ |
+| short_circuit_to_if | ✅ | ❌ | ❌ |
+| disallow_single_arg_nesting | ✅ | ❌ | ❌ |
+| total | 57.6% | 15.2% | 12.1% |
+
+## Blue v.s.
+
+| Blue v.s. | YAS | SciML | Runic |
+| --- | --- | --- | --- |
+| indent | ✅ | ❌ | ❌ |
+| margin | ❌ | ❌ | ❌ |
+| always_for_in | ✅ | ❌ | ❌ |
+| whitespace_typedefs | ✅ | ❌ | ❌ |
+| whitespace_ops_in_indices | ❌ | ❌ | ❌ |
+| remove_extra_newlines | ✅ | ❌ | ❌ |
+| import_to_using | ✅ | ❌ | ❌ |
+| pipe_to_function_call | ✅ | ❌ | ❌ |
+| short_to_long_function_def | ❌ | ❌ | ❌ |
+| force_long_function_def | ✅ | ✅ | ✅ |
+| long_to_short_function_def | ❌ | ❌ | ❌ |
+| always_use_return | ❌ | ❌ | ❌ |
+| whitespace_in_kwargs | ✅ | ❌ | ❌ |
+| annotate_untyped_fields_with_any | ❌ | ❌ | ❌ |
+| format_docstrings | ✅ | ❌ | ❌ |
+| align_assignment | ✅ | ❌ | ❌ |
+| align_struct_field | ✅ | ❌ | ❌ |
+| align_conditional | ❌ | ❌ | ❌ |
+| align_pair_arrow | ❌ | ❌ | ❌ |
+| align_matrix | ❌ | ❌ | ❌ |
+| conditional_to_if | ✅ | ✅ | ✅ |
+| normalize_line_endings | ✅ | ✅ | ✅ |
+| trailing_comma | ✅ | ✅ | ✅ |
+| trailing_zero | ✅ | ❌ | ❌ |
+| join_lines_based_on_source | ❌ | ❌ | ❌ |
+| indent_submodule | ❌ | ❌ | ❌ |
+| separate_kwargs_with_semicolon | ✅ | ❌ | ❌ |
+| surround_whereop_typeparameters | ❌ | ❌ | ❌ |
+| for_in_replacement | ✅ | ❌ | ❌ |
+| variable_call_indent | ❌ | ❌ | ❌ |
+| yas_style_nesting | ❌ | ❌ | ❌ |
+| short_circuit_to_if | ✅ | ❌ | ❌ |
+| disallow_single_arg_nesting | ✅ | ❌ | ❌ |
+| total | 57.6% | 12.1% | 12.1% |
+
+## SciML v.s.
+
+| SciML v.s. | YAS | Blue | Runic |
+| --- | --- | --- | --- |
+| indent | ❌ | ❌ | ✅ |
+| margin | ✅ | ❌ | ❌ |
+| always_for_in | ❌ | ❌ | ✅ |
+| whitespace_typedefs | ❌ | ❌ | ✅ |
+| whitespace_ops_in_indices | ❌ | ❌ | ✅ |
+| remove_extra_newlines | ❌ | ❌ | ❌ |
+| import_to_using | ❌ | ❌ | ✅ |
+| pipe_to_function_call | ❌ | ❌ | ✅ |
+| short_to_long_function_def | ❌ | ❌ | ❌ |
+| force_long_function_def | ✅ | ✅ | ✅ |
+| long_to_short_function_def | ❌ | ❌ | ❌ |
+| always_use_return | ❌ | ❌ | ❌ |
+| whitespace_in_kwargs | ❌ | ❌ | ✅ |
+| annotate_untyped_fields_with_any | ❌ | ❌ | ❌ |
+| format_docstrings | ❌ | ❌ | ❌ |
+| align_assignment | ❌ | ❌ | ✅ |
+| align_struct_field | ❌ | ❌ | ❌ |
+| align_conditional | ❌ | ❌ | ❌ |
+| align_pair_arrow | ❌ | ❌ | ❌ |
+| align_matrix | ❌ | ❌ | ❌ |
+| conditional_to_if | ✅ | ✅ | ✅ |
+| normalize_line_endings | ✅ | ✅ | ✅ |
+| trailing_comma | ✅ | ✅ | ✅ |
+| trailing_zero | ❌ | ❌ | ✅ |
+| join_lines_based_on_source | ❌ | ❌ | ❌ |
+| indent_submodule | ❌ | ❌ | ❌ |
+| separate_kwargs_with_semicolon | ❌ | ❌ | ✅ |
+| surround_whereop_typeparameters | ❌ | ❌ | ✅ |
+| for_in_replacement | ❌ | ❌ | ✅ |
+| variable_call_indent | ❌ | ❌ | ❌ |
+| yas_style_nesting | ❌ | ❌ | ❌ |
+| short_circuit_to_if | ❌ | ❌ | ❌ |
+| disallow_single_arg_nesting | ❌ | ❌ | ❌ |
+| total | 15.2% | 12.1% | 48.5% |
+
+## Runic v.s.
+
+| Runic v.s. | YAS | Blue | SciML |
+| --- | --- | --- | --- |
+| indent | ❌ | ❌ | ✅ |
+| margin | ❌ | ❌ | ❌ |
+| always_for_in | ❌ | ❌ | ✅ |
+| whitespace_typedefs | ❌ | ❌ | ✅ |
+| whitespace_ops_in_indices | ❌ | ❌ | ✅ |
+| remove_extra_newlines | ❌ | ❌ | ❌ |
+| import_to_using | ❌ | ❌ | ✅ |
+| pipe_to_function_call | ❌ | ❌ | ✅ |
+| short_to_long_function_def | ❌ | ❌ | ❌ |
+| force_long_function_def | ✅ | ✅ | ✅ |
+| long_to_short_function_def | ❌ | ❌ | ❌ |
+| always_use_return | ❌ | ❌ | ❌ |
+| whitespace_in_kwargs | ❌ | ❌ | ✅ |
+| annotate_untyped_fields_with_any | ❌ | ❌ | ❌ |
+| format_docstrings | ❌ | ❌ | ❌ |
+| align_assignment | ❌ | ❌ | ✅ |
+| align_struct_field | ❌ | ❌ | ❌ |
+| align_conditional | ❌ | ❌ | ❌ |
+| align_pair_arrow | ❌ | ❌ | ❌ |
+| align_matrix | ❌ | ❌ | ❌ |
+| conditional_to_if | ✅ | ✅ | ✅ |
+| normalize_line_endings | ✅ | ✅ | ✅ |
+| trailing_comma | ✅ | ✅ | ✅ |
+| trailing_zero | ❌ | ❌ | ✅ |
+| join_lines_based_on_source | ❌ | ❌ | ❌ |
+| indent_submodule | ❌ | ❌ | ❌ |
+| separate_kwargs_with_semicolon | ❌ | ❌ | ✅ |
+| surround_whereop_typeparameters | ❌ | ❌ | ✅ |
+| for_in_replacement | ❌ | ❌ | ✅ |
+| variable_call_indent | ❌ | ❌ | ❌ |
+| yas_style_nesting | ❌ | ❌ | ❌ |
+| short_circuit_to_if | ❌ | ❌ | ❌ |
+| disallow_single_arg_nesting | ❌ | ❌ | ❌ |
+| total | 12.1% | 12.1% | 48.5% |
+
+## Similarity
+
+|            |    YAS |   Blue |  SciML |  Runic |
+| ---------- | ------ | ------ | ------ | ------ |
+|   YAS v.s. | 100.0% |  57.6% |  15.2% |  12.1% |
+|  Blue v.s. |  57.6% | 100.0% |  12.1% |  12.1% |
+| SciML v.s. |  15.2% |  12.1% | 100.0% |  48.5% |
+| Runic v.s. |  12.1% |  12.1% |  48.5% | 100.0% |

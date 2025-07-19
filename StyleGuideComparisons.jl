@@ -47,24 +47,13 @@ println(readme, "This document compares the Julia style guides: [YAS](https://gi
 println(readme, "\n## Star History\n")
 println(readme, "[![Star History Chart](https://api.star-history.com/svg?repos=jrevels/YASGuide,JuliaDiff/BlueStyle,SciML/SciMLStyle,fredrikekre/Runic.jl&type=Date)](https://www.star-history.com/#jrevels/YASGuide&JuliaDiff/BlueStyle&SciML/SciMLStyle&fredrikekre/Runic.jl&Date)")
 
-# similarity table
-println(readme, "\n## Similarity\n")
-print(readme, "|           ")
-for style2 in styles
-    @printf(readme, " | %6s", style2)
-end
-print(readme, " |\n")
-print(readme, "| ----------")
-for style2 in styles
-    print(readme, " | ------")
-end
-print(readme, " |\n")
-for style1 in styles
-    @printf(readme, "| %5s v.s.", style1)
-    for style2 in styles
-        print(readme, " | ", @sprintf("%5.1f", sum(result[name, style1] == result[name, style2] for name in names) / length(names) * 100), "%")
+# code comparison
+for name in names
+    # print to README.md
+    println(readme, "\n## [$(name)]($(result[name,:url]))")
+    for style in styles
+        println(readme, "```julia\n# $(style)\n$(result[name, style])\n```")
     end
-    print(readme, " |\n")
 end
 
 # pairwise comparison table
@@ -94,13 +83,24 @@ for style1 in styles
     print(readme, " |\n")
 end
 
-# code comparison
-for name in names
-    # print to README.md
-    println(readme, "\n## [$(name)]($(result[name,:url]))")
-    for style in styles
-        println(readme, "```julia\n# $(style)\n$(result[name, style])\n```")
+# similarity table
+println(readme, "\n## Similarity\n")
+print(readme, "|           ")
+for style2 in styles
+    @printf(readme, " | %6s", style2)
+end
+print(readme, " |\n")
+print(readme, "| ----------")
+for style2 in styles
+    print(readme, " | ------")
+end
+print(readme, " |\n")
+for style1 in styles
+    @printf(readme, "| %5s v.s.", style1)
+    for style2 in styles
+        print(readme, " | ", @sprintf("%5.1f", sum(result[name, style1] == result[name, style2] for name in names) / length(names) * 100), "%")
     end
+    print(readme, " |\n")
 end
 
 # close README.md
